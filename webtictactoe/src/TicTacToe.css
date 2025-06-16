@@ -1,0 +1,115 @@
+:root {
+  /* Theme variables for Tic Tac Toe (overrides for this component only) */
+  --ttt-primary: #4CAF50;
+  --ttt-secondary: #FFC107;
+  --ttt-accent: #2196F3;
+}
+
+/* Main container for the TicTacToe component */
+.ttt-container {
+  background: #fff;
+  border-radius: 18px;
+  max-width: 340px;
+  margin: 40px auto 0 auto;
+  padding: 24px 24px 18px 24px;
+  box-shadow: 0 4px 20px 0 rgba(44, 124, 112, 0.05),
+    0 1.5px 6px 0 rgba(44, 124, 112, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Status and info above the board */
+.ttt-status {
+  font-size: 1.18rem;
+  color: var(--ttt-accent);
+  margin-bottom: 16px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+/* Board grid */
+.ttt-board {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ttt-row {
+  display: flex;
+}
+
+/* Cells styling */
+.ttt-cell {
+  width: 80px;
+  height: 80px;
+  background: #fafbfc;
+  border: 2px solid #e3e8ee;
+  border-radius: 10px;
+  margin: 4px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  box-shadow: 0 0.5px 3px rgba(44,124,112,.09);
+  user-select: none;
+}
+
+.ttt-cell:focus,
+.ttt-cell:hover {
+  border-color: var(--ttt-accent);
+  background: #f3faff;
+}
+
+/* X and O theme coloring */
+.ttt-primary {
+  color: var(--ttt-primary);
+}
+
+.ttt-secondary {
+  color: var(--ttt-secondary);
+}
+
+.ttt-accent {
+  color: var(--ttt-accent);
+}
+
+/* Reset button */
+.ttt-reset-btn {
+  margin-top: 18px;
+  background: var(--ttt-accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s;
+  box-shadow: 0 1.5px 2px 0 rgba(44, 124, 112, 0.06);
+}
+.ttt-reset-btn:hover,
+.ttt-reset-btn:focus {
+  background: var(--ttt-primary);
+  color: #fff;
+}
+
+@media (max-width: 500px) {
+  .ttt-container {
+    max-width: 98vw;
+    padding: 10vw 2vw 2vw 2vw;
+  }
+  .ttt-cell {
+    width: 18vw;
+    height: 18vw;
+    min-width: 54px;
+    min-height: 54px;
+    font-size: 2rem;
+  }
+}
